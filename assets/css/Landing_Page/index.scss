@@ -1,0 +1,1095 @@
+$color-white: #ffffff;
+$color-black: #252a32;
+$color-light: #f1f5f8;
+$color-red: #d32f2f;
+$color-blue: #0061a8;
+$color-light-blue: #d8e3e7;
+
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: $color-white;
+  scrollbar-width: 1px; /* "auto" or "thin" */
+  scrollbar-color: $color-blue $color-black;
+}
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $color-blue $color-black;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+  display: block;
+}
+
+*::-webkit-scrollbar-track {
+  background: $color-black;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $color-blue;
+  border-radius: 10px;
+  border: 0px solid $color-black;
+}
+
+.akila-hidden {
+  display: none;
+}
+
+.akila-header {
+
+  color: #ffffff;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  .akila-navbar {
+    position: sticky;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    flex-basis: auto;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90rem;
+    width: 100%;
+    padding: 1rem 4rem;
+    margin: 0 auto;
+
+    .akila-brand {
+      font-family: inherit;
+      font-size: 1.75rem;
+      color: #ffffff;
+      font-weight: 700;
+      line-height: inherit;
+      text-transform: uppercase;
+      color: $color-white;
+    }
+
+    .akila-menu {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      flex-basis: auto;
+      justify-content: center;
+      align-items: center;
+
+      &-item {
+        &:not(:first-child) {
+          margin-left: 2rem;
+        }
+
+        a {
+          font-family: inherit;
+          font-size: 1rem;
+          font-weight: 700;
+          line-height: inherit;
+          color: $color-white;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .akila-header {
+    .akila-navbar {
+      padding: 1rem 2rem;
+      margin: 0 auto;
+
+      .akila-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0;
+        background: $color-light;
+        transition: all 0.3s ease;
+
+        .akila-menu {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 25%;
+          width: 100%;
+          transform: translateY(-50%);
+
+          &-item {
+            padding-bottom: 1rem;
+            width: 100%;
+            text-align: left;
+
+            &:nth-child(1) a {
+              transition-delay: 0.2s;
+            }
+            &:nth-child(2) a {
+              transition-delay: 0.3s;
+            }
+            &:nth-child(3) a {
+              transition-delay: 0.4s;
+            }
+            &:nth-child(4) a {
+              transition-delay: 0.5s;
+            }
+
+            &:not(:first-child) {
+              margin-left: 0;
+            }
+
+            a {
+              padding: 1rem 2rem;
+              opacity: 0;
+              color: $color-white;
+              font-size: 1rem;
+              font-weight: 600;
+              transform: translateX(-20px);
+              transition: all 0.3s ease-in-out;
+            }
+          }
+        }
+      }
+
+      .akila-nav-toggle {
+        display: block;
+        position: fixed;
+        right: 1rem;
+        top: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        cursor: pointer;
+        z-index: 999;
+
+        span {
+          display: block;
+          width: 20px;
+          height: 2px;
+          background: $color-black;
+          border-radius: 2px;
+          margin-left: 14px;
+
+          &:nth-child(1) {
+            margin-top: 16px;
+          }
+          &:nth-child(2) {
+            margin-top: 4px;
+            opacity: 1;
+          }
+          &:nth-child(3) {
+            margin-top: 4px;
+          }
+        }
+      }
+
+      #nav:checked + .akila-nav-toggle {
+        transform: rotate(45deg);
+
+        span {
+          background: $color-black;
+          transition: transform 0.5s ease;
+
+          &:nth-child(1) {
+            transform: translateY(6px) rotate(180deg);
+          }
+          &:nth-child(2) {
+            opacity: 0;
+          }
+          &:nth-child(3) {
+            transform: translateY(-6px) rotate(90deg);
+          }
+        }
+      }
+
+      #nav:checked ~ .akila-wrapper {
+        z-index: 99;
+        opacity: 1;
+
+        .akila-menu {
+          &-item {
+            a {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.akila-main-1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url("../../media/akila/main.png");
+  height: 100vh;
+}
+
+body::-webkit-scrollbar {
+  width: 9px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: $color-black; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $color-blue; /* color of the scroll thumb */
+  border-radius: 6px; /* roundness of the scroll thumb */
+  border: 1px solid $color-black; /* creates padding around scroll thumb */
+}
+.akila-main-topic {
+  text-align: left;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 4vw;
+
+  .akila-container {
+    background-color: RGBA(255,255,255,0.10);
+    display: flex;
+    font-size: 2vw;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+  }
+  .akila-container > div {
+    flex: 1; /*grow*/
+  }
+  h1{
+    font-size: 10rem;
+  }
+
+  h2 {
+    font-size: 2vw;
+  }
+  h3 {
+    font-family: "Antonio", sans-serif;
+    font-size: 3vw;
+
+    span {
+      font-size: 2vw;
+    }
+  }
+
+  img {
+    color: $color-white;
+    width: 2vw;
+  }
+  span {
+    font-size: 1.5vw;
+
+    a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+  }
+}
+.akila-about-icaf {
+  margin-top: 98vh;
+  color: #252a32;
+  //overflow-x: hidden;
+
+  .flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .flex-container {
+    text-align: left;
+    padding-left: 40px;
+    text-align: left;
+    line-height: 140px;
+
+    h1 {
+      font-size: 6vw;
+    }
+    h2 {
+      font-size: 4vw;
+      margin-left: 3vw;
+    }
+
+    .info {
+      background-color: #d8e3e7;
+      line-height: normal;
+      padding-top: 3%;
+      margin-left: 5%;
+      padding-left: 3%;
+      padding-right: 6%;
+      text-align: justify;
+      font-size: 1.2vw;
+    }
+  }
+}
+
+
+.akila-latest-news::-webkit-scrollbar{
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+.akila-latest-news {
+  
+ background-position: center;
+  margin-top: 3%;
+  color: #252a32;
+  text-align: center;
+  font-size: 2vw;
+
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
+  span {
+    text-decoration: underline;
+    font-size: 3vw;
+  }
+
+  .flex-container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .flex-container::before {
+    content: none;
+    border-left: #252a32 2px solid;
+  }
+
+  .flex-container > div {
+    background-color: #f1f1f1;
+    width: auto;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
+}
+
+.akila-news-card {
+  border-radius: 10px;
+  width: 300px;
+  border-right: $color-blue 4px solid;
+  line-height: 40px;
+  padding: 10px;
+  h1 {
+    font-size: 20px;
+  }
+  p {
+    font-size: small;
+  }
+  a{
+    text-align: center;
+  }
+
+  .btn {
+    text-align: center;
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid $color-blue;
+    border-radius: 0.0rem;
+    color: $color-blue;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 10px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      outline: 0;
+    }
+  }
+      .fourth {
+      // background: $yellow;
+      text-align: center;
+      border-color: $color-blue;
+      color: $color-blue;
+      background: {
+        image: linear-gradient(45deg, $color-blue 50%, transparent 50%);
+        position: 100%;
+        size: 400%;
+      }
+      transition: background 300ms ease-in-out;
+
+      &:hover {
+        background-position: 0;
+      }
+    }
+}
+.akila-keynote-speakers {
+  //background-image: url('https://image.freepik.com/free-vector/white-abstract-background_23-2148809723.jpg');
+  background-color: rgb(235, 245, 251);
+  height: auto;
+  margin-top: 100px;
+  color: #252a32;
+  //overflow-x: hidden;
+
+  .topics{
+    margin-top: 100px;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .flex-container {
+    text-align: left;
+    padding-left: 40px;
+    text-align: left;
+    line-height: 100px;
+
+    h1 {
+      font-size: 5vw;
+    }
+    h2 {
+      font-size: 7vw;
+      margin-left: 3vw;
+    }
+
+    .info {
+      width: 100%;
+      line-height: normal;
+      padding-left: 5%;
+      text-align: justify;
+    }
+  }
+
+  table{
+    width: 100%;
+    tr{
+      width: 100%;
+    }
+    td{
+      width: 50%;
+    }
+  }
+
+  .akila-speaker{
+
+    img{
+      object-fit: cover;
+      width: 100%;
+      background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8));
+      filter: grayscale(140%);
+    }
+
+      position: relative;
+
+     
+  }
+}
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  padding: 20px;
+  text-align: left;
+
+  h1{
+    font-size: 1px;
+  }
+}
+.akila-speaker:hover .overlay {
+  opacity: 1;
+}
+
+.coveringCanvas{
+  width:100%;
+  height:99%;
+  position:absolute;
+  top:0px;
+  left:0px;
+  background-color: RGBA(0,123,255,0.3);
+}
+.coveringCanvasTwo{
+  width:100%;
+  height:99%;
+  position:absolute;
+  top:0px;
+  left:0px;
+  background-color: RGBA(232,43,21,0.45);
+}
+.akila-keynote-morekeynote{
+  
+  width: 100%;
+  margin-top: 2%;
+
+  h1{
+    text-align: center;
+    color: black;
+    font-size: 3vw;
+
+    span{
+      font-size: 4vw;
+      text-decoration: underline;
+    }
+  }
+  .akila-scroll{
+    overflow-x: scroll;
+  }
+
+  figcaption {
+    padding: 10px;
+    line-height: 1.5;
+    text-align: left;
+    color: black;
+  }
+
+  table{
+    td{
+      //width: 100px;
+      padding-left: 30px;
+    }
+  }
+}
+.akila-tracks{
+  //padding-bottom: 90px;
+  height: auto;
+  .akila-container {
+    background-color: rgba(255,255,255,0.10);
+    display: flex;
+    font-size: 2vw;
+    margin-top: 4vh;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+    padding-right: 50px;
+
+
+    div::nth-child(1){
+      background-color: black;
+    }
+  }
+
+  .akila-container > div {
+    margin-left: 20px;
+    flex: 1; /*grow*/
+    //border-right: 1px solid black;
+    
+    ul{
+      //padding-left: 20px;
+      margin-top: 20px;
+      font-size: xx-large;
+      //text-decoration: underline;
+      color: #154360 ;
+      background:rgba(21,67,96,0.1);
+      border-radius: 5px;
+      li{
+        text-align: center; 
+        margin-top: 20px;
+        
+        div{
+          width: 100%;
+          
+          height: 100%;
+          
+          border : none;
+          outline: none;
+          // -webkit-box-shadow: 12px 20px 28px -9px rgba(0,0,0,0.75);
+          // -moz-box-shadow: 12px 20px 28px -9px rgba(0,0,0,0.75);
+          // box-shadow: 12px 20px 28px -9px rgba(0,0,0,0.75);
+        }
+      }
+    }
+  }
+  h5{
+    font-size: xx-large;
+    text-shadow:  2px 2px 2px rgba(0, 0, 0, 0)
+    //initial-letter: 5;
+  }
+}
+.akila-adddet{
+  padding : 20px;
+
+  .akila-container {
+    background-color: RGBA(255,255,255,0.10);
+    display: flex;
+    font-size: 1.6vw;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+    padding: 20px;
+
+
+    div:nth-child(1){
+      
+      padding : 20px;
+      //font-family: 'Roboto Condensed', sans-serif;
+      background: rgb(2,0,36);
+    //background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    //background-color: #d1d9d9;
+    //background: rgb(2,0,36);
+    //background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 93%, rgba(0,212,255,1) 100%);
+    background-color: #0a1931;
+    }
+    div:nth-child(2){
+      background-color: #273746 ;
+      padding : 20px;
+    }
+    div:nth-child(3){
+      background-color: #566573  ;
+      padding : 20px;
+    }
+
+  }
+  .akila-container > div {
+    flex: 1; /*grow*/
+    margin: 10px;
+    border-radius: 10px;
+  }
+
+
+}
+.akila-footer{
+  .copy{
+    text-align: center;
+  }
+  background-color: #393e46;
+      .akila-container {
+        background-color: RGBA(255,255,255,0.10);
+        display: flex;
+        font-size: 1.6vw;
+        //text-align: center;
+        width: 100%;
+        border-radius: 5px;
+        padding: 20px;
+    }
+
+    .akila-container > div {
+      flex: 1; /*grow*/
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    //.mapouter{position:relative;text-align:right;height:294px;width:713px;}
+    .gmap_canvas {overflow:hidden;background:none!important;height:auto;width:713px;}
+
+   .links{
+    ul{
+      text-align: center;
+    }
+
+    li{
+      
+      float: left;
+      padding-left: 20px;
+      font-size: 40px;
+    }
+
+   }
+   .ql{
+      ul{
+        margin-top: 10px;
+        p{
+          font-size: 20px;
+        }
+      }
+   }
+   .email{
+     ul{
+       li{
+         font-size: 26px;
+         color: white;
+         text-decoration-color: white;
+       }
+       a{
+         color: white;
+         text-decoration: underline;
+       }
+     }
+   }
+}
+.akila-payment{
+
+
+
+  .akila-container {
+    overflow-y: hidden;
+    background-color: RGBA(255,255,255,0.10);
+    display: flex;
+    //padding:20px;
+    font-size: larger;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+    //font-family: 'Pacifico', cursive;
+    font-family: 'Darker Grotesque', sans-serif;
+
+    div:nth-child(1){
+      flex: 1;
+    }
+    div:nth-child(2){
+      flex: 2;
+    }
+  }
+  .akila-container > div {
+    flex: 600px 0; /*grow*/
+    height: 100vh;
+  }
+
+  
+
+  .img{
+    background-image: url('https://www.rcem.ac.uk/images/RCEM/RCEM_2017_low_res-94.jpg');
+    background-position:top;
+    background-repeat: no-repeat;
+    
+    //padding:20px;
+    p{
+      padding:10px;
+      width: auto;
+    }
+  }
+
+  .payment{
+    overflow-y: scroll;
+    height: 90vh;
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+    color: black;
+    p{
+      font-size: 25px;
+    }
+
+    div{
+      width: 100%;
+    }
+
+    .akila-container {
+      background-color: RGBA(255,255,255,0.10);
+      display: flex;
+      //padding:20px;
+      font-size: larger;
+      border: 1px #301b3f solid;
+      text-align: center;
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      //font-family: 'Pacifico', cursive;
+      font-family: 'Darker Grotesque', sans-serif;
+
+      div:nth-child(1){
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        cursor: grabbing;
+      }
+
+      div:nth-child(2){
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        cursor: grabbing;
+      }
+    }
+    .akila-container > div {
+      //background-color: black;
+      color: white;
+      height: auto;
+      padding:10px;
+      
+      flex: 1; /*grow*/
+      //height: 100vh;
+    }
+
+    .pay-info{
+      margin-top: 50px;
+      font-family: 'Darker Grotesque', sans-serif;
+
+      button{
+        width: 100%;
+        padding: 20px;
+        margin-top: 30px;
+        background-color: #301b3f;
+        color: honeydew;
+        border:none;
+        border-radius: 10px;
+        font-size: 20px;
+        text-decoration-thickness: 3px;
+        cursor:-webkit-grabbing;
+      }
+
+      input{
+        margin-top: 20px;
+        width: 100%;
+        border: 1px solid gray;
+        margin-left: 10px;
+      }
+      label{
+        font-size: 20px;
+      }
+
+      .akila-container {
+        background-color: RGBA(255,255,255,0.10);
+        display: flex;
+        font-size: 2vw;
+        text-align: center;
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+      }
+      .akila-container > div {
+        flex: 1; /*grow*/
+        color: black;
+      }
+    }
+
+
+  }
+
+  .dates{
+    .akila-container {
+      background-color: RGBA(255,255,255,0.10);
+      display: flex;
+      font-size: 2vw;
+      text-align: center;
+      width: 100%;
+      border-radius: 5px;
+      border: none;
+    }
+    .akila-container > input label {
+      flex: 1; /*grow*/
+      color: black;
+      cursor: none;
+      padding-left: 20px;
+    }
+  }
+}
+.akila-user{
+
+  //overflow: hidden;
+
+
+  .akila-container {
+    //overflow-y: hidden;
+    background-color: RGBA(255,255,255,0.10);
+    display: flex;
+    //padding:20px;
+    font-size: larger;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+    //font-family: 'Pacifico', cursive;
+    font-family: 'Darker Grotesque', sans-serif;
+
+    div:nth-child(1){
+      flex: 1;
+    }
+    div:nth-child(2){
+      flex: 1;
+      overflow-y: scroll;
+    }
+  }
+  .akila-container > div {
+    flex-direction: column;
+    overflow-y: scroll;
+    flex: 1; /*grow*/
+    height: 100vh;
+  }
+
+  .img{
+    background-image: url('http://researchconferences.in/RESEARCH-IN-INCLUDE/images/about-img.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    
+    //padding:20px;
+    p{
+      padding:10px;
+      width: auto;
+    }
+  }
+
+  .login-reg{
+    //width: 300px;
+    padding-top: 20px;
+    //margin : auto;
+    font-size: larger;
+
+    div{
+      overflow-y: scroll;
+      height: auto;
+     // border-radius: 0px;
+      padding: 10px;
+      cursor: grabbing;
+    }
+  }
+
+  .login-form{
+    //background: #0a043c;
+    //background: linear-gradient(90deg, rgba(2,0,36,1) 28%, rgba(11,11,170,1) 60%, rgba(10,48,111,1) 100%);
+    overflow-y: scroll;
+    height: auto;
+
+  }
+  .login{
+    height: auto;
+    overflow-y: scroll;
+    p{
+      color:black;
+      margin-bottom: 10px;
+      font-family: 'Darker Grotesque', sans-serif;
+      font-size: 40px;
+      //background-color: blue;
+    }
+
+    p::before{
+      content: none;
+      background-color: blueviolet;
+    }
+    //padding-top: 40px;
+    background: #ffff;
+
+    input{
+      width:90%;
+      border:none;
+      margin-top: 7px;
+      background-color: #efefef;
+      
+      //border: 1px solid black;
+    }
+
+    input:nth-child(2){
+      -webkit-text-security: disc;    
+    }
+
+
+    button{
+      margin-top: 20px;
+      width: 90%;
+      outline: none;
+      border:none;
+      padding:20px;
+      border-radius: 10px;
+      background-color: #233e8b;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    img{
+      //border-radius: 100px;
+      margin-top: 10px;
+      height: 200px;
+    }
+
+    .overlay{
+      position: absolute;
+      background-color: black;
+      height: 100px;
+      height: 100px;
+    }
+  }
+}
+.noti{
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  height: auto;
+  padding: 20px;
+  margin:10px;
+  width: 400px;
+  border-radius: 10px;
+  border:none;
+  background-color: #184d47;
+  color: #9ede73;
+  transition: background-color 1s;
+  transition: color 1s;
+}
+.notiErr{
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  height: auto;
+  padding: 20px;
+  margin:10px;
+  width: 400px;
+  border-radius: 10px;
+  border:none;
+  background-color: #810000;
+  color: white;
+  transition: background-color 1s;
+  transition: color 1s;
+}
+.dropdown-content {
+  display: none;
+  color: white;
+  position: absolute;
+  background-color: transparent;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 2;
+  font-weight: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  
+}
+.dropdown-content p:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.dropdown-content{
+  p{
+    text-transform: uppercase;
+    padding-top: 10px;
+  }
+}
+.edi-nav{
+  background-color: rgb(7, 7, 75);
+}
+.edi-div-1{
+  border-radius: 0px;
+}

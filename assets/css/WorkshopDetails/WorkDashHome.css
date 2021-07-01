@@ -1,0 +1,117 @@
+.nt-dcard-cont{
+    display: flex;
+    padding-left: 1%;
+    padding-top: 2%;
+}
+.nt-dash-card{
+    margin-right: 3%;
+    width: 25%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 7px 29px 0px;
+    padding: 2%;
+    text-align: center;
+}
+.nt-dcard-head{
+    color: #000000;
+    font-weight: lighter;
+}
+.nt-dcard-qunt{
+    font-weight:normal;
+    color: #474747;
+}
+.nt-approvedcard{
+    width: 97%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 7px 29px 0px;
+    padding: 2%;
+    text-align: center;
+}
+.nt-div-head{
+    text-align: left;
+    color: #000000;
+    margin-bottom: 2%;
+    margin-left: 1%;
+}
+.nt-div-head-text{
+    font-size: large;
+    font-weight: inherit;
+}
+.nt-table{
+    font-size: medium;
+    width: 100%;
+    border-collapse: collapse;
+    color: #000000;
+}
+
+.nt-td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+
+}
+.nt-approve-btn{
+    padding: 3%;
+    width: 50px;
+    font-size: 10px;
+    background-color: rgb(26, 199, 49);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+.nt-approve-btn:hover{
+    background-color: rgb(21, 138, 36);
+}
+.nt-decline-btn{
+    margin-left: 1%;
+    padding: 3%;
+    width: 50px;
+    font-size: 10px;
+    background-color: rgb(255, 40, 40);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+.nt-decline-btn:hover{
+    background-color: rgb(255, 86, 86);
+}
+.nt-preview-btn{
+    margin-left: 1%;
+    padding: 3%;
+    width: 50px;
+    font-size: 10px;
+    background-color: rgb(40, 169, 255);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+.nt-preview-btn:hover{
+    background-color: rgb(94, 191, 255);
+}
+.nt-form-div{
+    margin-top: 2%;
+}
+.nl-frm-it{
+    margin-bottom: 2%;
+}
+.nt-frm-lable{
+    font-size: medium;
+    font-weight: bold;
+}
+.nt-frm-input{
+    width: 85%;
+}
+
+.nt-cw-item{
+    margin-top: 3%;
+    text-align: center;
+    width: 90%;
+    color: #000000;
+}
+.nt-cw-input{
+    margin-left: 0%;
+    width: 100%;
+    padding-bottom: 3%;
+}

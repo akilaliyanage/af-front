@@ -1,0 +1,843 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+<div
+  className="akila-main-1"
+>
+  <div
+    className="akila-template-header"
+  >
+    <div
+      className="akila-header"
+      data-testid="nav-bar"
+    >
+      <nav
+        className="akila-navbar"
+      >
+        <a
+          className="akila-brand"
+          href=""
+        >
+          
+        </a>
+        <input
+          className="akila-hidden"
+          id="nav"
+          type="checkbox"
+        />
+        <label
+          className="akila-nav-toggle"
+          htmlFor="nav"
+        >
+          <span />
+          <span />
+          <span />
+        </label>
+        <div
+          className="akila-wrapper"
+        >
+          <ul
+            className="akila-menu"
+          >
+            <li
+              className="akila-menu-item"
+              hidden={false}
+            >
+              <div
+                className="dropdown"
+              >
+                <a>
+                  <svg
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    strokeWidth="0"
+                    style={
+                      Object {
+                        "color": undefined,
+                      }
+                    }
+                    viewBox="0 0 1024 1024"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+                    />
+                  </svg>
+                   REGISTRATIONS
+                </a>
+                <div
+                  className="dropdown-content"
+                >
+                  <br />
+                  <a
+                    href="/userReg"
+                    onClick={[Function]}
+                  >
+                    <p>
+                      Attendee Registration
+                    </p>
+                  </a>
+                  <a
+                    href="/"
+                    onClick={[Function]}
+                  >
+                    <p>
+                      researcher Registration
+                    </p>
+                  </a>
+                  <a
+                    href="/"
+                    onClick={[Function]}
+                  >
+                    <p>
+                      workshop presenter
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li
+              className="akila-menu-item"
+              onClick={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#1b4d72",
+                  "borderRadius": "10px",
+                  "color": "rgb(63, 65, 69)",
+                  "padding": "10px",
+                }
+              }
+            >
+              <a
+                href=""
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  strokeWidth="0"
+                  style={
+                    Object {
+                      "color": undefined,
+                    }
+                  }
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M858.5 763.6a374 374 0 0 0-80.6-119.5 375.63 375.63 0 0 0-119.5-80.6c-.4-.2-.8-.3-1.2-.5C719.5 518 760 444.7 760 362c0-137-111-248-248-248S264 225 264 362c0 82.7 40.5 156 102.8 201.1-.4.2-.8.3-1.2.5-44.8 18.9-85 46-119.5 80.6a375.63 375.63 0 0 0-80.6 119.5A371.7 371.7 0 0 0 136 901.8a8 8 0 0 0 8 8.2h60c4.4 0 7.9-3.5 8-7.8 2-77.2 33-149.5 87.8-204.3 56.7-56.7 132-87.9 212.2-87.9s155.5 31.2 212.2 87.9C779 752.7 810 825 812 902.2c.1 4.4 3.6 7.8 8 7.8h60a8 8 0 0 0 8-8.2c-1-47.8-10.9-94.3-29.5-138.2zM512 534c-45.9 0-89.1-17.9-121.6-50.4S340 407.9 340 362c0-45.9 17.9-89.1 50.4-121.6S466.1 190 512 190s89.1 17.9 121.6 50.4S684 316.1 684 362c0 45.9-17.9 89.1-50.4 121.6S557.9 534 512 534z"
+                  />
+                </svg>
+                 
+                hello  null | SIGN-OUT
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div
+    className="akila-main-topic"
+  >
+    <div>
+      <h1>
+        
+      </h1>
+      <h2>
+        
+      </h2>
+      <h3>
+        Sri Lanka, 
+        
+         
+        <span>
+           @ 
+          
+        </span>
+      </h3>
+      <span>
+         
+        <b>
+           Join us via 
+        </b>
+         
+        <a
+          href=""
+        >
+          Ms Teams 
+        </a>
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAD5ElEQVR4nO2bTYscVRSG3xOSiMS40KWYzASCOjEaiYYguEzEuFBxfoEh+AvEP+DXzl0y0Qhu/AVJXAoS3TkQJ18GQU0GRBeCkxGSGQcfF3U6XV1dPV23vm5nul5oqrlf5z3vPaf7VtW9UocOUw2LaRzYLemApOckzUlak/SVmS21xaEVAYDtkvZLOqjE2Wf9+2wOhw1Jr5rZN21wq10A4AklDqYdnZP0UE7zNUnXJV2RdFXSU5JOSlo0sxfr5paH0gJkwveg+k4/ltdc0q/qO7rk3382s43UmDskrUvaMLMdZbmFYKwAHr57lDh7WMlsHpD0tKRtOV3+lnTNP9clLUr60cxWixACkCQzayU9t+cQ2CfpTUnPKyx8lyRdMbPfG2PbAO4LAGyT9LGk9zQYGUj6RWPC94EHcJIEd4FzwCngqOd6mzzopUGrAC677fnWjQ/yiCbAmtve2brxQR6tCpD+Fd8pSWa23pbxzQDsAz4DloF//boAzDRlME7ojeABrJKPO8CxxgzXPnBJHo7zwEvALr9e8PIVYG8jhmsdtAIP4PyI+p4IZ0bUzwBnPWXWC6fOBAqQey8AHPH6Wzl1xz1FwlNnAgXIXX8Au73+XqZ8NuV8eOpMoADjIuC3TPnZKqkziQKMcuSi15/OlC+XTZ0Bw2PIfT+cWoVxKVAAfNaOAI/4tef8CrAn06+3kAtKnaG7wTH4L7D9AIfA9quSXvdPGnckzZvZ7Uz5n5KeVPJQ5Yec8Z7x6x/57ApEwGao2j87Dsnf2QJwm+Tv7BZwOjvzqX4L3i8odWpzoG4BSvSbof8vUDh1anMgtgDe95g7mYcVmlwHTIIA3n8vcMZTZm1c6tRpuFYBCmAZeK2qvfuPvnrkyz6MrNo/O05BLJvZ5jMbYniSIiC0HXCC/mIoPHK2gABFnO8hu4bYEgKU6pf3YmOq0AkQm0BsdALEJhAbnQCxCcRGJ0BsArExVQIAQzdqoc8EN8N3Cn/u1zbe9uvNoZq61vJV0dS9ADAH/OXN3i1tuGkU4QHYKAGAD4FXgMdJ3gwdAj6g/7b5a5LtQOGG20BBAea92U+psm8Zjy+Bh0sbbgNlQ9mj4mXgU2DRZ/wf4CbwOXC0kuG2kJqtT4AXgEeDQrmq4doGrMijdChXNVzroBV4kLzpueFhXDyUqxpuZPAJ5pHOoXUnEHWbXNtIC3DDr2/EIBIdwDseffeAL5iSrbLpN0Mm6SNJ72t4s/TYvf51oed8W9vlh4wAs5LeUqTt8tEFyIItfmCiOzJT94BUOzS1X9IpPQiHpkLANB2bCwHDByfvKjk4eTUmrw4dpgj/A9ch2EWJwogoAAAAAElFTkSuQmCC"
+        />
+      </span>
+      <div
+        className="container"
+      >
+        <div>
+          NaN
+           D
+        </div>
+        <div>
+          NaN
+           H
+        </div>
+        <div>
+          NaN
+           M
+        </div>
+        <div>
+          NaN
+           S
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="akila-about-icaf"
+  >
+    <div>
+      <div
+        className="flex-container"
+      >
+        <div>
+          <h1>
+            About
+          </h1>
+          <h2>
+            
+          </h2>
+          <h1>
+            Conference
+          </h1>
+        </div>
+        <div
+          className="info"
+        >
+          <p>
+            
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="akila-latest-news"
+  >
+    <div>
+      <h1>
+        Latest 
+        <span>
+          News
+        </span>
+      </h1>
+      <div
+        className="flex-container"
+      />
+    </div>
+  </div>
+  <dir
+    className="akila-keynote-speakers"
+  >
+    <div>
+      <div
+        className="flex-container"
+      >
+        <div
+          className="topics"
+        >
+          <h1>
+            Our
+          </h1>
+          <h2>
+            Keynote
+          </h2>
+          <h1>
+            Speakers
+          </h1>
+        </div>
+        <div
+          className="info"
+        >
+          <div>
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <div
+                      className="akila-speaker"
+                    >
+                      <img
+                        alt=""
+                        data-testid="speaker-img"
+                        src="http://cdn.differencebetween.net/wp-content/uploads/2018/01/Differences-Between-Teacher-and-Professor-1.jpg"
+                      />
+                      <div
+                        className="overlay"
+                      >
+                        <p>
+                          Prof. Nobody
+                        </p>
+                        <p>
+                          SLIIT, Sri Lanka
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div
+                      className="akila-speaker"
+                    >
+                      <img
+                        alt=""
+                        data-testid="speaker-img"
+                        src="https://indiaeducationdiary.in/wp-content/uploads/2020/11/shitij-kapur.xae50dfd9.jpg"
+                      />
+                      <canvas
+                        className="coveringCanvas"
+                      />
+                      <div
+                        className="overlay"
+                      >
+                        <p>
+                          Prof. Nobody
+                        </p>
+                        <p>
+                          SLIIT, Sri Lanka
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div
+                      className="akila-speaker"
+                    >
+                      <img
+                        alt=""
+                        data-testid="speaker-img"
+                        src="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/201907/1%2520Patrick%2520Winston%2520at%2520____%2520-%2520photo%2520credit%2520Jason%2520Dorfman%252C%2520MIT%2520CSAIL_0.jpg?itok=r6epNmaH"
+                      />
+                      <canvas
+                        className="coveringCanvas"
+                      />
+                      <div
+                        className="overlay"
+                      >
+                        <p>
+                          Prof. Nobody
+                        </p>
+                        <p>
+                          SLIIT, Sri Lanka
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div
+                      className="akila-speaker"
+                    >
+                      <img
+                        alt=""
+                        data-testid="speaker-img"
+                        src="https://media1.s-nbcnews.com/j/newscms/2020_30/3393635/200630-mike-adams-unc-mc-1354_9abcaec4d365b36dd6352627f7d155b2.fit-2000w.jpg"
+                      />
+                      <div
+                        className="overlay"
+                      >
+                        <p>
+                          Prof. Nobody
+                        </p>
+                        <p>
+                          SLIIT, Sri Lanka
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dir>
+  <dir
+    className="akila-keynote-morekeynote"
+  >
+    <div>
+      <h1>
+        Additional 
+        <span>
+          speakers
+        </span>
+      </h1>
+      <div
+        className="akila-scroll"
+      >
+        <table>
+          <tr>
+            <td />
+            <td>
+              <img
+                alt=""
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKd2drefzPMEho_WG9Wk14cd5RnKKsQkKA_A&usqp=CAU"
+              />
+              <figcaption>
+                <div
+                  class="fig-title"
+                >
+                  Fern.
+                </div>
+                <div
+                  class="fig-author"
+                >
+                  by Annie Spratt
+                </div>
+              </figcaption>
+            </td>
+            <td>
+              <img
+                alt=""
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKd2drefzPMEho_WG9Wk14cd5RnKKsQkKA_A&usqp=CAU"
+              />
+              <figcaption>
+                <div
+                  class="fig-title"
+                >
+                  Fern.
+                </div>
+                <div
+                  class="fig-author"
+                >
+                  by Annie Spratt
+                </div>
+              </figcaption>
+            </td>
+            <td>
+              <img
+                alt=""
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKd2drefzPMEho_WG9Wk14cd5RnKKsQkKA_A&usqp=CAU"
+              />
+              <figcaption>
+                <div
+                  class="fig-title"
+                >
+                  Fern.
+                </div>
+                <div
+                  class="fig-author"
+                >
+                  by Annie Spratt
+                </div>
+              </figcaption>
+            </td>
+            <td>
+              <img
+                alt=""
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKd2drefzPMEho_WG9Wk14cd5RnKKsQkKA_A&usqp=CAU"
+              />
+              <figcaption>
+                <div
+                  class="fig-title"
+                >
+                  Fern.
+                </div>
+                <div
+                  class="fig-author"
+                >
+                  by Annie Spratt
+                </div>
+              </figcaption>
+            </td>
+            <td>
+              <img
+                alt=""
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKd2drefzPMEho_WG9Wk14cd5RnKKsQkKA_A&usqp=CAU"
+              />
+              <figcaption>
+                <div
+                  class="fig-title"
+                >
+                  Fern.
+                </div>
+                <div
+                  class="fig-author"
+                >
+                  by Annie Spratt
+                </div>
+              </figcaption>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </dir>
+  <dir
+    className="akila-keynote-speakers"
+  >
+    <div
+      className="akila-tracks"
+    >
+      <div
+        class="flex-container"
+      >
+        <div
+          className="topics"
+        >
+          <h1>
+            Conference
+          </h1>
+          <h2>
+            Tracks
+          </h2>
+        </div>
+        <div
+          className="info"
+        >
+          <div
+            className="container"
+          >
+            <div>
+              <h5>
+                Application Frameworks
+              </h5>
+              <div>
+                <ul>
+                  <li>
+                    <div>
+                      akila
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      akila
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      akila
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      akila
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <h5>
+                Database Systems
+              </h5>
+              <div>
+                <ul>
+                  <li>
+                    <div>
+                      akila
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      akila
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      akila
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      akila
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dir>
+  <dir
+    className="akila-keynote-morekeynote"
+  >
+    <div
+      className="akila-adddet"
+    >
+      <div>
+        <div
+          className="container"
+        >
+          <div>
+            <p>
+               
+              <span>
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  strokeWidth="0"
+                  style={
+                    Object {
+                      "color": undefined,
+                    }
+                  }
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM695.5 365.7l-210.6 292a31.8 31.8 0 0 1-51.7 0L308.5 484.9c-3.8-5.3 0-12.7 6.5-12.7h46.9c10.2 0 19.9 4.9 25.9 13.3l71.2 98.8 157.2-218c6-8.3 15.6-13.3 25.9-13.3H689c6.5 0 10.3 7.4 6.5 12.7z"
+                  />
+                </svg>
+              </span>
+               Register for a workshop
+            </p>
+          </div>
+          <div>
+            <p>
+               
+              <span>
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  strokeWidth="0"
+                  style={
+                    Object {
+                      "color": undefined,
+                    }
+                  }
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372zm47.7-395.2l-25.4-5.9V348.6c38 5.2 61.5 29 65.5 58.2.5 4 3.9 6.9 7.9 6.9h44.9c4.7 0 8.4-4.1 8-8.8-6.1-62.3-57.4-102.3-125.9-109.2V263c0-4.4-3.6-8-8-8h-28.1c-4.4 0-8 3.6-8 8v33c-70.8 6.9-126.2 46-126.2 119 0 67.6 49.8 100.2 102.1 112.7l24.7 6.3v142.7c-44.2-5.9-69-29.5-74.1-61.3-.6-3.8-4-6.6-7.9-6.6H363c-4.7 0-8.4 4-8 8.7 4.5 55 46.2 105.6 135.2 112.1V761c0 4.4 3.6 8 8 8h28.4c4.4 0 8-3.6 8-8.1l-.2-31.7c78.3-6.9 134.3-48.8 134.3-124-.1-69.4-44.2-100.4-109-116.4zm-68.6-16.2c-5.6-1.6-10.3-3.1-15-5-33.8-12.2-49.5-31.9-49.5-57.3 0-36.3 27.5-57 64.5-61.7v124zM534.3 677V543.3c3.1.9 5.9 1.6 8.8 2.2 47.3 14.4 63.2 34.4 63.2 65.1 0 39.1-29.4 62.6-72 66.4z"
+                  />
+                </svg>
+              </span>
+               Payments
+            </p>
+          </div>
+          <div>
+            <p>
+               
+              <span>
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  strokeWidth="0"
+                  style={
+                    Object {
+                      "color": undefined,
+                    }
+                  }
+                  viewBox="0 0 1024 1024"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M678.3 642.4c24.2-13 51.9-20.4 81.4-20.4h.1c3 0 4.4-3.6 2.2-5.6a371.67 371.67 0 0 0-103.7-65.8c-.4-.2-.8-.3-1.2-.5C719.2 505 759.6 431.7 759.6 349c0-137-110.8-248-247.5-248S264.7 212 264.7 349c0 82.7 40.4 156 102.6 201.1-.4.2-.8.3-1.2.5-44.7 18.9-84.8 46-119.3 80.6a373.42 373.42 0 0 0-80.4 119.5A373.6 373.6 0 0 0 137 888.8a8 8 0 0 0 8 8.2h59.9c4.3 0 7.9-3.5 8-7.8 2-77.2 32.9-149.5 87.6-204.3C357 628.2 432.2 597 512.2 597c56.7 0 111.1 15.7 158 45.1a8.1 8.1 0 0 0 8.1.3zM512.2 521c-45.8 0-88.9-17.9-121.4-50.4A171.2 171.2 0 0 1 340.5 349c0-45.9 17.9-89.1 50.3-121.6S466.3 177 512.2 177s88.9 17.9 121.4 50.4A171.2 171.2 0 0 1 683.9 349c0 45.9-17.9 89.1-50.3 121.6C601.1 503.1 558 521 512.2 521zM880 759h-84v-84c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v84h-84c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h84v84c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-84h84c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8z"
+                  />
+                </svg>
+              </span>
+               Attendee registration
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dir>
+  <dir
+    className="akila-footer"
+  >
+    <div>
+      <div
+        class="container"
+      >
+        <div
+          className="links"
+        >
+          <p>
+            Get in touch with us
+          </p>
+          <div
+            class="mapouter"
+          >
+            <div
+              class="gmap_canvas"
+            >
+              <iframe
+                height="200"
+                id="gmap_canvas"
+                src="https://maps.google.com/maps?q=sliit&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+              />
+              <br />
+            </div>
+          </div>
+          <ul>
+            <li>
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 1024 1024"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-92.4 233.5h-63.9c-50.1 0-59.8 23.8-59.8 58.8v77.1h119.6l-15.6 120.7h-104V912H539.2V602.2H434.9V481.4h104.3v-89c0-103.3 63.1-159.6 155.3-159.6 44.2 0 82.1 3.3 93.2 4.8v107.9z"
+                />
+              </svg>
+            </li>
+            <li>
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 1024 1024"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM727.3 401.7c.3 4.7.3 9.6.3 14.4 0 146.8-111.8 315.9-316.1 315.9-63 0-121.4-18.3-170.6-49.8 9 1 17.6 1.4 26.8 1.4 52 0 99.8-17.6 137.9-47.4-48.8-1-89.8-33-103.8-77 17.1 2.5 32.5 2.5 50.1-2a111 111 0 0 1-88.9-109v-1.4c14.7 8.3 32 13.4 50.1 14.1a111.13 111.13 0 0 1-49.5-92.4c0-20.7 5.4-39.6 15.1-56a315.28 315.28 0 0 0 229 116.1C492 353.1 548.4 292 616.2 292c32 0 60.8 13.4 81.1 35 25.1-4.7 49.1-14.1 70.5-26.7-8.3 25.7-25.7 47.4-48.8 61.1 22.4-2.4 44-8.6 64-17.3-15.1 22.2-34 41.9-55.7 57.6z"
+                />
+              </svg>
+            </li>
+            <li>
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 1024 1024"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M512 306.9c-113.5 0-205.1 91.6-205.1 205.1S398.5 717.1 512 717.1 717.1 625.5 717.1 512 625.5 306.9 512 306.9zm0 338.4c-73.4 0-133.3-59.9-133.3-133.3S438.6 378.7 512 378.7 645.3 438.6 645.3 512 585.4 645.3 512 645.3zm213.5-394.6c-26.5 0-47.9 21.4-47.9 47.9s21.4 47.9 47.9 47.9 47.9-21.3 47.9-47.9a47.84 47.84 0 0 0-47.9-47.9zM911.8 512c0-55.2.5-109.9-2.6-165-3.1-64-17.7-120.8-64.5-167.6-46.9-46.9-103.6-61.4-167.6-64.5-55.2-3.1-109.9-2.6-165-2.6-55.2 0-109.9-.5-165 2.6-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6 46.9 46.9 103.6 61.4 167.6 64.5 55.2 3.1 109.9 2.6 165 2.6 55.2 0 109.9.5 165-2.6 64-3.1 120.8-17.7 167.6-64.5 46.9-46.9 61.4-103.6 64.5-167.6 3.2-55.1 2.6-109.8 2.6-165zm-88 235.8c-7.3 18.2-16.1 31.8-30.2 45.8-14.1 14.1-27.6 22.9-45.8 30.2C695.2 844.7 570.3 840 512 840c-58.3 0-183.3 4.7-235.9-16.1-18.2-7.3-31.8-16.1-45.8-30.2-14.1-14.1-22.9-27.6-30.2-45.8C179.3 695.2 184 570.3 184 512c0-58.3-4.7-183.3 16.1-235.9 7.3-18.2 16.1-31.8 30.2-45.8s27.6-22.9 45.8-30.2C328.7 179.3 453.7 184 512 184s183.3-4.7 235.9 16.1c18.2 7.3 31.8 16.1 45.8 30.2 14.1 14.1 22.9 27.6 30.2 45.8C844.7 328.7 840 453.7 840 512c0 58.3 4.7 183.2-16.2 235.8z"
+                />
+              </svg>
+            </li>
+            <li>
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 1024 1024"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M409.4 128c-42.4 0-76.7 34.4-76.7 76.8 0 20.3 8.1 39.9 22.4 54.3 14.4 14.4 33.9 22.5 54.3 22.5h76.7v-76.8c0-42.3-34.3-76.7-76.7-76.8zm0 204.8H204.7c-42.4 0-76.7 34.4-76.7 76.8s34.4 76.8 76.7 76.8h204.6c42.4 0 76.7-34.4 76.7-76.8.1-42.4-34.3-76.8-76.6-76.8zM614 486.4c42.4 0 76.8-34.4 76.7-76.8V204.8c0-42.4-34.3-76.8-76.7-76.8-42.4 0-76.7 34.4-76.7 76.8v204.8c0 42.5 34.3 76.8 76.7 76.8zm281.4-76.8c0-42.4-34.4-76.8-76.7-76.8S742 367.2 742 409.6v76.8h76.7c42.3 0 76.7-34.4 76.7-76.8zm-76.8 128H614c-42.4 0-76.7 34.4-76.7 76.8 0 20.3 8.1 39.9 22.4 54.3 14.4 14.4 33.9 22.5 54.3 22.5h204.6c42.4 0 76.7-34.4 76.7-76.8.1-42.4-34.3-76.7-76.7-76.8zM614 742.4h-76.7v76.8c0 42.4 34.4 76.8 76.7 76.8 42.4 0 76.8-34.4 76.7-76.8.1-42.4-34.3-76.7-76.7-76.8zM409.4 537.6c-42.4 0-76.7 34.4-76.7 76.8v204.8c0 42.4 34.4 76.8 76.7 76.8 42.4 0 76.8-34.4 76.7-76.8V614.4c0-20.3-8.1-39.9-22.4-54.3-14.4-14.4-34-22.5-54.3-22.5zM128 614.4c0 20.3 8.1 39.9 22.4 54.3 14.4 14.4 33.9 22.5 54.3 22.5 42.4 0 76.8-34.4 76.7-76.8v-76.8h-76.7c-42.3 0-76.7 34.4-76.7 76.8z"
+                />
+              </svg>
+            </li>
+          </ul>
+        </div>
+        <div
+          className="ql"
+        >
+          <p>
+            Quick links
+          </p>
+          <ul>
+            <li>
+              <p>
+                Main topic
+              </p>
+            </li>
+            <li>
+              <p>
+                About
+              </p>
+            </li>
+            <li>
+              <p>
+                Speakers
+              </p>
+            </li>
+            <li>
+              <p>
+                Additional speakers
+              </p>
+            </li>
+            <li>
+              <p>
+                Conference Tracks
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div
+          className="email"
+        >
+          <p>
+            Additional Links
+          </p>
+          <ul>
+            <li>
+              <p>
+                <a
+                  href="mailto:icaf@sliit.lk"
+                >
+                  icaf@sliit.lk
+                </a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a
+                  href="mailto:icafinfo@sliit.lk"
+                >
+                  icafinfo@sliit.lk
+                </a>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <p
+          className="copy"
+        >
+          Copyright© 2021 ICAF-sliit
+        </p>
+      </div>
+    </div>
+  </dir>
+</div>
+`;

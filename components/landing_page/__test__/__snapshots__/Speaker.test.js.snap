@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`create a snapshot 1`] = `
+<div
+  className="akila-speaker"
+>
+  <img
+    alt=""
+    data-testid="speaker-img"
+  />
+  <div
+    className="overlay"
+  >
+    <p>
+      Prof. Nobody
+    </p>
+    <p>
+      SLIIT, Sri Lanka
+    </p>
+  </div>
+</div>
+`;

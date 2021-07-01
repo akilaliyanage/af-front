@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot check for Publication 1`] = `
+<div
+  className="qualification-container"
+>
+  <div
+    className="form-row-container qualification-row"
+  >
+    <div
+      className="form-Element-container"
+    >
+      <input
+        className="Researcher-form-input-long"
+        id="degreeName"
+        name="degreeName"
+        type="text"
+      />
+      <label>
+        Name of the Degree
+      </label>
+    </div>
+  </div>
+  <div
+    className="form-row-container qualification-row"
+    data-testid="qualification-container"
+  >
+    <div
+      className="form-Element-container"
+    >
+      <input
+        className="Researcher-form-input-long"
+        id="UniName"
+        list="uniList"
+        name="UniName"
+        type="text"
+      />
+      <datalist
+        id="uniList"
+      />
+      <label>
+        Name of the University
+      </label>
+    </div>
+    <div
+      className="form-Element-container"
+    >
+      <select
+        className="Researcher-form-input-address-extras"
+        id="qualiYear"
+        name="qualiYear"
+      >
+        <option
+          value={2011}
+        >
+          2011
+        </option>
+        <option
+          value={2012}
+        >
+          2012
+        </option>
+        <option
+          value={2013}
+        >
+          2013
+        </option>
+        <option
+          value={2014}
+        >
+          2014
+        </option>
+        <option
+          value={2015}
+        >
+          2015
+        </option>
+      </select>
+      <label>
+        Year
+      </label>
+    </div>
+  </div>
+</div>
+`;

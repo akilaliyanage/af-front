@@ -1,0 +1,67 @@
+
+.nethsara-workshopCards{
+    background-color: #f5f5f5;
+  }
+.w-img-div{
+  background-color:rgb(23, 24, 26, 0.3);
+  background-image: linear-gradient(rgba(51, 51, 51, 0.527), rgba(0, 0, 0, 0.5)), url("../../media/nethsara/workshop2.jpg");
+  height: 50vh;
+  background-image: no-repeat;
+}
+  .nethsara-card-container{
+    display: flex;
+    margin-top: 2%;
+  }
+  .nethsara-card{
+    padding: 3%;
+    margin: 5%;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 3%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    text-align: center;
+  }
+  .nethsara-card-image{
+    width: 100%;
+    height: 100%;
+    /* background-color: #cfcfcf; */
+    color: #9c9c9c;
+    word-wrap: break-word;
+    object-fit: cover;
+    padding-left: 2%;
+    margin-top: 4%;
+    text-align: center;
+  }
+  .nethsara-card-text{
+    padding-top: 2%;
+    margin: 3%;
+    word-wrap: break-word;
+    text-align: center;
+  }
+  .nethsara-grid-container {
+    width: 80%;
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #f5f5f5;
+    padding: 10px;
+  }
+  
+  .nethsara-card-button{
+    background-color: #ffffff;
+    border: 2px solid #0daad1;
+    color: #0daad1;
+    padding: 1%;
+    width: 70%;
+    height: 40px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: 2%;
+    margin-bottom: 3%;
+  }
+  .nethsara-card-button:hover{
+    background-color: #0daad1;
+    color: #ffffff
+  }
+  

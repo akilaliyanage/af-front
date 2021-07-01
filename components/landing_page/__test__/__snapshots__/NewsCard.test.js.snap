@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+<div
+  className="akila-news-card"
+>
+  <h1>
+    May
+     
+    31
+    , 
+    2021
+  </h1>
+  <p />
+  <a
+    className="btn fourth"
+  >
+    Show more
+  </a>
+</div>
+`;

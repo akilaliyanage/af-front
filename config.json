@@ -1,0 +1,4 @@
+{
+    "host" : "http://test-1313167560.us-east-1.elb.amazonaws.com:8000",
+    "local" : "http://localhost:8000"
+}

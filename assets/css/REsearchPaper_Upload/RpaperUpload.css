@@ -1,0 +1,51 @@
+.uploadResearchPaperBack{
+
+    background:linear-gradient(
+          rgba(0, 0, 0, 0.3), 
+          rgba(0, 0, 0, 0.3)
+        ),url(../../media/Mahen/big-data-connector-intro.webp);
+    opacity: 0.9;
+    background-size: cover;
+    background-position: top;
+    min-height: 100%;
+    height: 100vh;
+    position: relative;
+}
+.paper-bounderies{
+    padding-top: 10px;
+}
+.form-container-bounderies{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 50vh;
+    overflow-y: scroll;
+}
+
+.topic-Seperator{
+    color: #fc4c1c;
+    background-color: #fc4c1c;
+    height: 1.4vh;
+    width : 40%;
+    border-radius: 30px;
+}
+.StepperLabel-style{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.form-part-header{
+    margin-bottom: 0px;
+}
+.input-element-container{
+    padding-right: 30px;
+    padding-left: 30px;
+}
+.section-seperater{
+   margin-top: 20px;
+   margin-bottom: 20px;
+   background-color: #fc4c1c;
+   height: 3px;
+   border-radius: 5px;
+}

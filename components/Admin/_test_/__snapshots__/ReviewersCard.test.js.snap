@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Compare the snapshot of Reviewers card 1`] = `
+<div
+  className="uditha-card uditha-reviewer-card-align"
+>
+  <div
+    className="uditha-reviewers"
+  >
+    <h4
+      style={
+        Object {
+          "color": "white",
+        }
+      }
+    >
+      Current Reviewers
+    </h4>
+    <div
+      className="uditha-reviewer-button-align"
+    >
+      <button
+        className="button-add-reviewer"
+        onClick={[Function]}
+      >
+        Add new
+      </button>
+    </div>
+    <br />
+  </div>
+</div>
+`;
+
+exports[`create a snapshot 1`] = `
+<div
+  className="uditha-card uditha-reviewer-card-align"
+>
+  <div
+    className="uditha-reviewers"
+  >
+    <h4
+      style={
+        Object {
+          "color": "white",
+        }
+      }
+    >
+      Current Reviewers
+    </h4>
+    <div
+      className="uditha-reviewer-button-align"
+    >
+      <button
+        className="button-add-reviewer"
+        onClick={[Function]}
+      >
+        Add new
+      </button>
+    </div>
+    <br />
+  </div>
+</div>
+`;
+
+exports[`create a snapshot of Reviewers card 1`] = `
+<div
+  className="uditha-card uditha-reviewer-card-align"
+>
+  <div
+    className="uditha-reviewers"
+  >
+    <h4
+      style={
+        Object {
+          "color": "white",
+        }
+      }
+    >
+      Current Reviewers
+    </h4>
+    <div
+      className="uditha-reviewer-button-align"
+    >
+      <button
+        className="button-add-reviewer"
+        onClick={[Function]}
+      >
+        Add new
+      </button>
+    </div>
+    <br />
+  </div>
+</div>
+`;
