@@ -5,6 +5,7 @@ import { Avatar, Image } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import {AiOutlineUser, AiOutlineDown } from 'react-icons/ai'
 import { Link } from 'react-router-dom';
+import { Tooltip } from 'antd';
 
 class NavBar extends Component {
     constructor(props) {
@@ -36,19 +37,23 @@ class NavBar extends Component {
         window.localStorage.setItem('token','')
         window.localStorage.setItem('id','')
         window.localStorage.setItem('proImg','')
+        window.localStorage.setItem('role','')
 
-        window.location.reload();
+        window.location.replace('/home');
     }
 
     render() { 
+
+
         //const item = <li hidden={window.localStorage.getItem('token') == null?true : false} onClick={this.logout} style={{backgroundColor:'#1b4d72',color:'rgb(63, 65, 69)',padding:'10px', borderRadius:'10px'}} className="akila-menu-item"><a href=""><AiOutlineUser/>   hello {window.localStorage.getItem('username') + ' | SIGN-OUT'}</a></li>
         const drop = <div className="dropdown">
         <a><AiOutlineDown/> REGISTRATIONS</a>
             <div className="dropdown-content">
                 <br />
-                <Link to="/register"><p>Attendee Registration</p></Link>
+                <Link to="/register"><p>Attendee </p></Link>
                 <Link to=""><p>researcher Registration</p></Link>
                 <Link to=""><p>workshop presenter</p></Link>
+                <Link to="/editor/reg"><p>Editor</p></Link>
             </div>
         </div>
 
@@ -65,13 +70,11 @@ class NavBar extends Component {
             </div>
         </div>
 
-        const user = <div className="dropdown">
-        <Avatar src={window.localStorage.getItem('proImg')} />
-            <div className="dropdown-content">
-                <br />
-                <p>{window.localStorage.getItem('username')}</p>
-                <Link><p onClick={this.logout}>Log Out</p></Link>
-            </div>
+        const user = <div className="dropdown" style={{zIndex:'3'}} onClick={this.logout}>
+             <Tooltip title={window.localStorage.getItem('username') + " | Click here to logout"}>
+             <Avatar src={window.localStorage.getItem('proImg')} />
+             </Tooltip>
+       
         </div>
         return (
             <div className='akila-header' data-testid='nav-bar'>

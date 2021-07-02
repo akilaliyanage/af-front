@@ -42,7 +42,7 @@ class UserKeliton extends Component {
                 window.localStorage.setItem('id',data.id)
                 window.localStorage.setItem('username',data.username)
                 window.localStorage.setItem('proImg',data.proImg)
-                window.localStorage.setItem('role','atendee')
+                window.localStorage.setItem('role','attendee')
                 notification['success']({
                     message: 'Login Sucessfull',
                     description:

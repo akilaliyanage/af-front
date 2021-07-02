@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Input } from 'antd';
 import config from '../../config.json'
+import { message, Button, Space } from 'antd';
 class PaymentForm extends Component {
     constructor(props) {
         super(props);
@@ -22,14 +23,12 @@ class PaymentForm extends Component {
 
     componentDidMount(){
 
-        // //calling the api to fetch data
-        // fetch(config.host + "/nav-items").then(res => res.json()).then(data =>{
-        //     console.log(data)
-        //     this.setState({navbar_items:data})
-        // })
+        this.role(window.localStorage.getItem('role'));
+
     }
 
     role(val){
+
         if(val == 'attendee'){
             this.setState({role : 'attendee'})
             fetch(config.host + "/price/atendee").then(res => res.json()).then(data =>{
@@ -81,6 +80,10 @@ class PaymentForm extends Component {
             body : JSON.stringify(data)
         }).then(res => res.json()).then(data =>{
             console.log(data);
+            if(data.message == "ok"){
+                message.success('Payment Successfull');
+                window.location.replace('/home')
+            }
         })
     }
     render() { 

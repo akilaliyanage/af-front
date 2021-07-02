@@ -30,7 +30,7 @@ const props = {
       }
     },
   };
-class UserRegForm extends Component {
+class AdminReg extends Component {
     constructor(props) {
         super(props);
         this.state = { 
@@ -60,7 +60,7 @@ class UserRegForm extends Component {
             }
             console.log(data);
     
-            fetch(config.host + '/n-user/reg',{
+            fetch(config.host + '/editor/reg',{
                 method : 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -74,10 +74,10 @@ class UserRegForm extends Component {
                     window.localStorage.setItem('token',data.token)
                     window.localStorage.setItem('id',data.id)
                     window.localStorage.setItem('username',data.username)
-                    window.localStorage.setItem('proImg',data.proImg)
-                    window.localStorage.setItem('role','attendee')
+                    window.localStorage.setItem('proImg',window.localStorage.getItem('proImg'))
+                    window.localStorage.setItem('role','editor')
 
-                    window.location.replace("/payment")
+                    window.location.replace("/edi-admin")
                 }
                 
             }).catch(err =>{
@@ -137,4 +137,4 @@ class UserRegForm extends Component {
     }
 }
  
-export default UserRegForm;
+export default AdminReg;

@@ -5,6 +5,7 @@ import { Descriptions, Badge } from 'antd';
 import {Link} from 'react-router-dom'
 import config from '../../config.json'
 import Footer from '../landing_page/Footer'
+import NavBar from '../landing_page/NavBar'
 
 const { SubMenu } = Menu;
 const { TextArea } = Input;
@@ -18,7 +19,8 @@ class EventAbout extends Component {
         this.state = { 
             about : '',
             nabout:'',
-            aboutPen: 0
+            aboutPen: 0,
+            navbar_items : []
          }
     }
 
@@ -29,6 +31,12 @@ class EventAbout extends Component {
 
     componentDidMount(){
         this.fetchEventAbout()
+
+        //calling the api to fetch data
+        fetch(config.host + "/nav-items").then(res => res.json()).then(data =>{
+          console.log(data)
+          this.setState({navbar_items:data})
+      })
 
         fetch(config.host + "/edi-noti/pending-about").then(res => res.json()).then(data => {
           this.setState({aboutPen : data.len})
@@ -89,22 +97,14 @@ class EventAbout extends Component {
 
 
     render() { 
+      if(window.localStorage.getItem('role') != 'editor'){
+        window.location.replace('/edi-login')
+    }
         return (
             <Layout>
-            <Header className="header">
-              <div className="logo" />
-              <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-                <Menu.Item key="1">
-                <div className="dropdown">
-        <Avatar src={window.localStorage.getItem('proImg')} />
-            <div className="dropdown-content" style={{backgroundColor:'white', color:'white'}}>
-                <p style={{color:'black'}}>{window.localStorage.getItem('username')}</p>
-                <Link><p onClick={this.logout}>Log Out</p></Link>
-            </div>
-        </div>
-                </Menu.Item>
-              </Menu>
-            </Header>
+            <div style={{backgroundColor:'#07074b'}}>
+                <NavBar items={this.state.navbar_items}/>
+                </div>
             <Content style={{ padding: '0 50px' }}>
               <Breadcrumb style={{ margin: '16px 0' }}>
                 <Breadcrumb.Item>Home</Breadcrumb.Item>

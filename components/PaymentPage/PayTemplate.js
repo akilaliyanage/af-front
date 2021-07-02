@@ -42,8 +42,6 @@ class PayTemplate extends Component {
                             <div style={{backgroundColor:'rgb(23, 24, 26, 0.3)'}}>
                                 <NavBar items={this.state.navbar_items}/>
                             </div>
-
-                            <KPanal/>
                         </div>
                         </div>
 

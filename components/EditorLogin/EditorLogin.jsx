@@ -42,7 +42,7 @@ class EditorLogin extends Component {
                 window.localStorage.setItem('id',data.id)
                 window.localStorage.setItem('username',data.username)
                 window.localStorage.setItem('proImg',data.proImg)
-                window.localStorage.setItem('role','atendee')
+                window.localStorage.setItem('role','editor')
                 notification['success']({
                     message: 'Login Sucessfull',
                     description:
@@ -53,7 +53,12 @@ class EditorLogin extends Component {
             }
             
         }).catch(err =>{
-            console.log(err)
+            notification['error']({
+                message: 'Login Fail',
+                description:
+                  'Please check the username and password and retry.',
+              });
+              
         })
     }
 

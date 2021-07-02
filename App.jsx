@@ -31,6 +31,7 @@ import AdminLogin from "./components/Admin/AdminLogin";
 import EditorLogin from "./components/EditorLogin/EditorLogin";
 import ViewResearcPapers from "./components/Admin/ViewResearchPapers";
 import ViewParticipation from "./components/Admin/ViewParticipation";
+import AdminReg from './components/EditorLogin/AdminReg';
 
 
 export default class App extends React.Component {
@@ -127,6 +128,11 @@ export default class App extends React.Component {
 
                     <Route exact path="/admin/login">
                         <AdminLogin/>
+
+                    </Route>
+
+                    <Route exact path="/editor/reg">
+                        <AdminReg/>
 
                     </Route>
 

@@ -7,6 +7,7 @@ import config from '../../config.json'
 import { Upload } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 import Footer from '../landing_page/Footer'
+import NavBar from '../landing_page/NavBar'
 
 const { SubMenu } = Menu;
 const { RangePicker } = DatePicker;
@@ -77,7 +78,8 @@ class KeyNote extends Component {
         this.state = { 
           keynote : [],
           kname : '',
-          kdes : ''
+          kdes : '',
+          navbar_items : []
          }
     }
 
@@ -87,6 +89,12 @@ class KeyNote extends Component {
       } 
 
     componentDidMount(){
+
+      //calling the api to fetch data
+      fetch(config.host + "/nav-items").then(res => res.json()).then(data =>{
+        console.log(data)
+        this.setState({navbar_items:data})
+    })
 
 
         fetch(config.host + "/keynote").then(res => res.json()).then(data => {
@@ -140,22 +148,14 @@ class KeyNote extends Component {
 
 
     render() { 
+      if(window.localStorage.getItem('role') != 'editor'){
+        return (window.location.replace('/edi-login'))
+    }
         return (
             <Layout>
-            <Header className="header">
-              <div className="logo" />
-              <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-                <Menu.Item key="1">
-                <div className="dropdown">
-        <Avatar src={window.localStorage.getItem('proImg')} />
-            <div className="dropdown-content" style={{backgroundColor:'white', color:'white'}}>
-                <p style={{color:'black'}}>{window.localStorage.getItem('username')}</p>
-                <Link><p onClick={this.logout}>Log Out</p></Link>
-            </div>
-        </div>
-                </Menu.Item>
-              </Menu>
-            </Header>
+            <div style={{backgroundColor:'#07074b'}}>
+                <NavBar items={this.state.navbar_items}/>
+                </div>
             <Content style={{ padding: '0 50px' }}>
               <Breadcrumb style={{ margin: '16px 0' }}>
                 <Breadcrumb.Item>Home</Breadcrumb.Item>
