@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot check for memberships 1`] = `
+<div
+  className="form-row-container"
+  data-testid="membership-container"
+>
+  <div
+    className="form-Element-container"
+  >
+    <input
+      className="Researcher-form-input-long"
+      id="membership"
+      name="membership"
+      type="text"
+    />
+    <label>
+      Name of Membership
+    </label>
+  </div>
+</div>
+`;

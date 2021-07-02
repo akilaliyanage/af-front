@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot check for Publication 1`] = `
+<div
+  className="qualification-container"
+  data-testid="qualification-container"
+>
+  <div
+    className="form-row-container qualification-row"
+  >
+    <div
+      className="form-Element-container"
+    >
+      <input
+        className="Researcher-form-input-long"
+        id="publication"
+        name="publication"
+        type="text"
+      />
+      <label>
+        Publication
+      </label>
+    </div>
+  </div>
+  <div
+    className="form-row-container qualification-row"
+  >
+    <div
+      className="form-Element-container"
+    >
+      <input
+        className="Researcher-form-input-long"
+        id="source"
+        name="source"
+        type="text"
+      />
+      <label>
+        Conference/Journal/Book
+      </label>
+    </div>
+    <div
+      className="form-Element-container"
+    >
+      <select
+        className="Researcher-form-input-address-extras"
+        id="pubYear"
+        name="pubYear"
+      >
+        <option
+          value={2011}
+        >
+          2011
+        </option>
+        <option
+          value={2012}
+        >
+          2012
+        </option>
+        <option
+          value={2013}
+        >
+          2013
+        </option>
+        <option
+          value={2021}
+        >
+          2021
+        </option>
+        <option
+          value={2019}
+        >
+          2019
+        </option>
+      </select>
+      <label>
+        Year
+      </label>
+    </div>
+  </div>
+  <div
+    className="form-row-container qualification-row"
+  >
+    <div
+      className="form-Element-container"
+    >
+      <input
+        className="Researcher-form-input-long"
+        id="pubURL"
+        name="pubURL"
+        type="text"
+      />
+      <label>
+        URL
+      </label>
+    </div>
+  </div>
+</div>
+`;

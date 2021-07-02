@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Compare the snapshot of MainCard 1`] = `
+<div
+  className="uditha-main-card uditha-main-card-align"
+>
+  <div
+    className="uditha-edit-content"
+  >
+    <div
+      className="uditha-main-card-title"
+    >
+      <h1 />
+    </div>
+    <br />
+    <div
+      className="uditha-main-card-title"
+    >
+      <h3 />
+    </div>
+    <br />
+    <h2>
+      @
+    </h2>
+    <h1>
+      SLIIT
+    </h1>
+    <br />
+    <button
+      className="uditha-notify-button blink"
+      onClick={[Function]}
+      style={
+        Object {
+          "display": "",
+        }
+      }
+    >
+      Updates are Pending
+    </button>
+  </div>
+</div>
+`;
+
+exports[`create a snapshot of MainCard 1`] = `
+<div
+  className="uditha-main-card uditha-main-card-align"
+>
+  <div
+    className="uditha-edit-content"
+  >
+    <div
+      className="uditha-main-card-title"
+    >
+      <h1 />
+    </div>
+    <br />
+    <div
+      className="uditha-main-card-title"
+    >
+      <h3 />
+    </div>
+    <br />
+    <h2>
+      @
+    </h2>
+    <h1>
+      SLIIT
+    </h1>
+    <br />
+    <button
+      className="uditha-notify-button blink"
+      onClick={[Function]}
+      style={
+        Object {
+          "display": "",
+        }
+      }
+    >
+      Updates are Pending
+    </button>
+  </div>
+</div>
+`;

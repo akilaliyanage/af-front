@@ -1,0 +1,54 @@
+.nt-r-login{
+    background-color: #282c34;
+    padding: 4.7% 5% 5% 20%;
+    height: 100vh;
+}
+.nt-log-card{
+    background-color: #282c34;
+    width: 80%;
+    height: 80vh;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 7px 29px 0px;
+    border-radius: 6%;
+    padding: 5% 20% 5% 20%;
+}
+.nt-login{
+    margin-top: 5%;
+    text-align: center;
+}
+.nt-log-head{
+    font-size: x-large;
+    font-weight: lighter;
+}
+.nt-log-form{
+    margin-top: 15%;
+    text-align: center;
+}
+.nt-formitem{
+    margin-bottom: 4%;
+}
+.nt-lable{
+    text-align: left;
+}
+.nt-input{
+    width: 70%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #00b5fddc;
+    background: none;
+    color: #a3a3a3;
+    font-size: medium;
+    padding: 2%;
+}
+.nl-form-btn{
+    margin-top: 10%;
+    background-color: #00b5fddc;
+    padding: 2%;
+    width: 70%;
+    color: white;
+    border: none;
+    font-size: medium;
+}
+.nl-form-btn:hover{
+    background-color: #004e6ddc;
+}

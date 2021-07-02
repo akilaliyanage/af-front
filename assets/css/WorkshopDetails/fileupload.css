@@ -1,0 +1,119 @@
+.file-upload {
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+  }
+  
+  .file-upload-btn {
+    width: 80%;
+    margin: 0;
+    color: #0074a1dc;
+    background: #ffffffdc;
+    border: none;
+    padding: 8px;
+    border-radius: 0px;
+    border: 1px solid #0074a1dc;
+    /* border-bottom: 4px solid #85bcd1dc; */
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  
+  .file-upload-btn:hover {
+    background: #0074a1dc;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+  }
+  
+  .file-upload-btn:active {
+    border: 0;
+    transition: all .2s ease;
+  }
+  
+  .file-upload-content {
+    display: none;
+    text-align: center;
+  }
+  
+  .file-upload-input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .image-upload-wrap {
+    margin-bottom: 20px;
+    border: 1px solid #000000dc;
+    /* border: 4px dashed #00b5fddc; */
+    position: relative;
+  }
+  
+  .image-dropping,
+  .image-upload-wrap:hover {
+    background-color: #c2cacedc;
+    /* border: 4px dashed #ffffff; */
+  }
+  
+  .image-title-wrap {
+    padding: 0 15px 15px 15px;
+    color: #222;
+  }
+  
+  .drag-text {
+    text-align: center;
+  }
+  
+  .drag-text .d-h3 {
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #000000dc;
+    padding: 60px 0;
+  }
+  
+  .file-upload-image {
+    max-height: 200px;
+    max-width: 200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .remove-image {
+    width: 200px;
+    margin: 0;
+    color: #fff;
+    background: #cd4535;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid #b02818;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  .remove-image:hover {
+    background: #c13b2a;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+  }
+  
+  .remove-image:active {
+    border: 0;
+    transition: all .2s ease;
+  }
+
+  .w-file-upload{
+    margin-top: 4%;
+    background-color: rgb(114, 128, 131);
+    color: #222;
+  }

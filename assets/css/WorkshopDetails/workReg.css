@@ -1,0 +1,72 @@
+.nt-r-signin{
+    background-color: #282c34;
+    padding: 4.7% 5% 5% 20%;
+    height: 100vh;
+}
+.nt-sign-card{
+    background-color: #282c34;
+    width: 80%;
+    height: 80vh;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 7px 29px 0px;
+    border-radius: 6%;
+    padding: 2% 20% 5% 20%;
+}
+.nt-signin{
+    margin-top: 5%;
+    text-align: center;
+}
+.nt-sign-head{
+    font-size: x-large;
+    font-weight: lighter;
+}
+.nt-log-reg{
+    text-align: center;
+    padding-left: 30%;
+    display: flex;
+    margin-top: 5%;
+}
+.nt-rg-btns{
+    padding: 3%;
+    width: 100px;
+    cursor: pointer;
+    border: 1px solid #00b5fddc;
+}
+.nt-sign-form{
+    margin-top: 6%;
+    text-align: center;
+}
+.nt-sign-formitem{
+    margin-bottom: 3%;
+}
+.nt-lable{
+    text-align: left;
+}
+.nt-sign-input{
+    width: 90%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #00b5fddc;
+    background: none;
+    color: #a3a3a3;
+    font-size: medium;
+    font-weight: lighter;
+    padding: 2%;
+}
+.nl-sign-form-btn{
+    margin-top: 5%;
+    background-color: #00b5fddc;
+    padding: 2%;
+    width: 90%;
+    color: white;
+    border: none;
+    font-size: medium;
+}
+.nl-sign-form-btn:hover{
+    background-color: #004e6ddc;
+}
+
+.nt-warn{
+    font-size: small;
+    color: #9c9c9c;
+}
