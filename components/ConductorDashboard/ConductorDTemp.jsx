@@ -6,7 +6,7 @@ import MyWorkshops from './MyWorkshops'
 
 import { Button, notification } from 'antd';
 
-const openNotification = () => {
+const openNotification = (noti) => {
     const key = `open${Date.now()}`;
     const btn = (
       <Button type="primary" size="small" onClick={() => notification.close(key)}>
@@ -28,19 +28,24 @@ class ConductorDTemp extends Component {
     constructor(props){
         super(props)
         this.state = {
-            notifications:'',
+            notifications:[],
             loginID:window.localStorage.getItem('wc-id'),
             loggedUser:window.localStorage.getItem('wc-email')
         }
     }
 
-    // componentDidMount(){
-    //     this.fetchItems(); 
-    // }
+    componentDidMount(){
+        this.fetchItems(); 
+    }
 
-    // fetchItems(){
-    //     fetch(config.local + '').then(res => res.json()).then(data => this.setState({notifications:data})).catch(err => console.log(err))
-    // }
+    fetchItems(){
+        const id = this.state.loginID
+        fetch(config.host + '/notify/myNoti/'+id ).then(res => res.json()).then(data => this.setState({notifications:data})).catch(err => console.log(err))
+        // this.state.notofications.map((noti) => {
+        //     openNotification(noti)
+        // })
+        // console.log(this.state.notifications)
+    }
 
     render() {
         return (
@@ -77,6 +82,13 @@ class ConductorDTemp extends Component {
                             Open the notification box
                         </Button> */}
                     </div>
+
+                    {this.state.notifications.map((noti) => {
+                        return(
+                                <h1>{noti.Status}</h1>   
+                        );
+                    })}
+                    
 
                 </div>
             </div>

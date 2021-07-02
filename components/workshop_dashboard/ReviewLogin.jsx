@@ -59,6 +59,9 @@ class ReviewLogin extends Component {
 
                 window.location = `/workshopDash`
             }
+            else{
+                alert("Unidentified User")
+            }
             
         }).catch(err =>{
             console.log(err)

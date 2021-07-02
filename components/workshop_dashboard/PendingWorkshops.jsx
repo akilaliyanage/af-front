@@ -23,6 +23,7 @@ class PendingWorkshops extends Component {
         }
         this.approveWorkshop = this.approveWorkshop.bind(this);
         this.declineWorkshop = this.declineWorkshop.bind(this);
+        this.saveNotification = this.saveNotification.bind(this);
         this.showModal = this.showModal.bind(this);
         this.handleOk = this.handleOk.bind(this);
         this.handleCancel = this.handleCancel.bind(this);
@@ -48,6 +49,23 @@ class PendingWorkshops extends Component {
         this.setState({visible : false})
     };
 
+    saveNotification(data){
+        fetch(config.host + '/notify/create',{
+            method : 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body : JSON.stringify(data)
+        }).then(res => res.json()).then(data =>{
+            if(data.status == 200){
+                console.log('noti saved')
+                // alert("Workshop Created Successfully!")
+                // window.location = `/condDash`
+            }
+        }).catch(err =>{
+            console.log(err)
+        })
+    }
 
     componentDidMount(){
         this.fetchItems(); 
@@ -57,13 +75,22 @@ class PendingWorkshops extends Component {
         fetch(config.host + '/wShop/pending').then(res => res.json()).then(data => this.setState({pendworkshops:data})).catch(err => console.log(err))
     }
     
-    approveWorkshop(id){
-        console.log(id)
+    approveWorkshop(id,user){
+        console.log(id+', user :'+user)
         fetch(config.host + '/wShop/approve/'+id).then(res => res.json()).then(data =>{
             
             if(data.message == 'success'){
+                const data = {
+                    type: 'workshop',
+                    itemId: id,
+                    userID: user,
+                    // approve: 'Approved',
+                    status: 'Approved'
+                }
+                this.saveNotification(data)
+                
                 alert("Workshop Approve Successful");
-                window.location = `/workshopDash`
+                // window.location = `/workshopDash`
             }
             else {
                 alert("Workshop Approve Failed");
@@ -75,7 +102,7 @@ class PendingWorkshops extends Component {
         })
     }
 
-    declineWorkshop(){
+    declineWorkshop(id){
         console.log(id)
         fetch(config.host + '/wShop/decline/'+id,).then(res => res.json()).then(data =>{
             
@@ -92,11 +119,6 @@ class PendingWorkshops extends Component {
             console.log(err)
         })
 
-        // setInterval(() => {
-        //     this.setState({isAuth : true});
-        // }, 2000);
-
-        // window.location = `/workshopDash`
     }
     
 
@@ -136,7 +158,7 @@ class PendingWorkshops extends Component {
                                             >Preview</button></td>
                                             {/* <td className="nt-td">{workshop.dateCreated}</td> */}
                                             <td>
-                                                <button className="nt-approve-btn" onClick={() => this.approveWorkshop(workshop._id)}> Approve </button>
+                                                <button className="nt-approve-btn" onClick={() => this.approveWorkshop(workshop._id, workshop.conductor)}> Approve </button>
                                                 <button className="nt-decline-btn" onClick={() => this.declineWorkshop(workshop._id)}> Decline </button>
                                             </td>
                                         </tr>

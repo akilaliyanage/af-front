@@ -86,9 +86,6 @@ class CreateWorkshop extends Component {
                 alert("Workshop Created Successfully!")
                 window.location = `/condDash`
             }
-            
-            
-            
         }).catch(err =>{
             console.log(err)
         })
