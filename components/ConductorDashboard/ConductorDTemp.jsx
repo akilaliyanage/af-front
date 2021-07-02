@@ -45,6 +45,8 @@ class ConductorDTemp extends Component {
         //     openNotification(noti)
         // })
         // console.log(this.state.notifications)
+
+        
     }
 
     render() {
