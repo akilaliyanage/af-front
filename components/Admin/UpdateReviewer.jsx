@@ -75,7 +75,7 @@ function UpdateReviewer(props){
         formData.append("picture",picture);
 
         console.log(rid);
-       const url = "http://localhost:8000/reviewer/update/"+rid;
+       const url = config.host+"/reviewer/update/"+rid;
        axios.put(url,formData).then((res) => {
            if(res.data.status === 200){
                alert("Successfully updated");
@@ -89,7 +89,7 @@ function UpdateReviewer(props){
 
     const DeleteReviewer = (e) => {
         e.preventDefault();
-        const url = "http://localhost:8000/reviewer/delete/"+rid;
+        const url = config.host+"/reviewer/delete/"+rid;
         axios.delete(url).then((res) => {
             if(res.data.status === 200){
                 alert("Successfully deleted");
