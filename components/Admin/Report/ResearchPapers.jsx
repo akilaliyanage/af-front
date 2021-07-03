@@ -9,7 +9,7 @@ function ResearchPaper(){
 
     useEffect(() => {
 
-        const url = config.host+"event-update/research-papers";
+        const url = config.host+"/event-update/research-papers";
         axios.get(url).then((res) => {
 
             setData(res.data);
