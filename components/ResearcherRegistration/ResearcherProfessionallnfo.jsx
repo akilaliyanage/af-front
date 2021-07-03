@@ -20,7 +20,7 @@ class ResearcherProfessionalInfo extends Component{
                         <div className='form-row-container'>
                                 <div className='form-row-container'>
                                     <div className='form-Element-container'>
-                                        <input type='text' className='Researcher-form-input-long' name='wPlace' id='wPlace' onChange={this.props.getValueOnChange}/>
+                                        <input type='text' required className='Researcher-form-input-long' name='wPlace' id='wPlace' onChange={this.props.getValueOnChange}/>
                                         <label>Name of the WorkPlace</label>
                                     </div>
                                 </div>
@@ -31,7 +31,7 @@ class ResearcherProfessionalInfo extends Component{
                         <div className='form-row-container'>
                                 <div className='form-row-container'>
                                     <div className='form-Element-container'>
-                                        <input type='text' className='Researcher-form-input' name='occupation' id='occupation' onChange={this.props.getValueOnChange}/>
+                                        <input required type='text' className='Researcher-form-input' name='occupation' id='occupation' onChange={this.props.getValueOnChange}/>
                                         <label>Occupation</label>
                                     </div>
                                 </div>

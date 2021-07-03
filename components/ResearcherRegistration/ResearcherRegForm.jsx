@@ -7,6 +7,7 @@ import ResercherGeneralInfo from '../ResearcherRegistration/ResearcherGeneralInf
 import ResearcherProfessionalInfo from '../ResearcherRegistration/ResearcherProfessionallnfo'
 import ResearcherAcademicInfo from '../ResearcherRegistration/ResearcherAcademicInfo'
 import ResearcherPasswords from '../ResearcherRegistration/ResearcherPasswords'
+import config from '../../config.json'
 
 class ResearcherRegForm extends Component {
 
@@ -41,7 +42,10 @@ class ResearcherRegForm extends Component {
         this.submitResearcher = this.submitResearcher.bind(this)
     }
 
-    submitResearcher(){
+    submitResearcher(e){
+
+        console.log('submit researcher called')
+        e.preventDefault()
         if(this.state.password != this.state.confPassword){
             this.setState({feedback : 'Password mismatch!!'})
             this.setState({password : ''})
@@ -83,19 +87,20 @@ class ResearcherRegForm extends Component {
             publications : this.state.publications,
         }
 
-        fetch("http://localhost:8000/researcher/" , {
+        fetch(config.local + "/researcher/" , {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
             },
             body : JSON.stringify(formData)
         })
-        .then(response => response.json())
-        .then(response =>{
+        .then(response => {
+            response.json()
             console.log(response)
             if(response.status == 200){
                 this.setState({feedback:'Successfully registered'})
-                NotificationManager.success('Thank you -  Approval of your registraton will notified shortly', this.state.feedback , 5000)
+                NotificationManager.success('Thank you -  Please login to the system using your credientials', this.state.feedback , 5000)
+                window.location.replace("/researcher-login")
             }
         })
         .catch(error =>{
@@ -126,7 +131,7 @@ class ResearcherRegForm extends Component {
     render(){
             return(
                 <React.Fragment>
-                    
+                    <form onSubmit={this.submitResearcher}>
                     <RegFormHeading title='ICAF - Researcher Registration Form'/>
 
                     <RegFormGeneralInfo/>
@@ -150,10 +155,11 @@ class ResearcherRegForm extends Component {
                     <hr className='Seperator'/>
                     <NotificationContainer/>
                     <div className='form-btn-container'>
-                        <button className='success-btn' onClick={this.submitResearcher}>Register</button>
+                        <button type='submit' className='success-btn' >Register</button>
                         <button className='success-fail'>Cancel</button>
                     </div>
                     <hr className='Seperator'/>
+                    </form>
                 </React.Fragment>
             );
         }

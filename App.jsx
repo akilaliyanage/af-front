@@ -32,7 +32,9 @@ import EditorLogin from "./components/EditorLogin/EditorLogin";
 import ViewResearcPapers from "./components/Admin/ViewResearchPapers";
 import ViewParticipation from "./components/Admin/ViewParticipation";
 import AdminReg from './components/EditorLogin/AdminReg';
-
+import DownloadsComponent from "./components/DownloadPage/DownloadsComponent";
+import ResearcherNotifications from "./components/ResearcherNotifications/ResearcherNotifications";
+import DashboardHome from './components/ResearcherDashboard/DashboardHome';
 
 export default class App extends React.Component {
     constructor(props) {
@@ -142,6 +144,18 @@ export default class App extends React.Component {
 
                     <Route exact path="/admin/view-participation">
                         <ViewParticipation/>
+                    </Route>
+
+                    <Route exact path="/researcher-dashboard">
+                        <DashboardHome/>
+                    </Route>
+
+                    <Route exact path="/common-downloads">
+                        <DownloadsComponent/>
+                    </Route>
+
+                    <Route exact path="/researcher-notifications">
+                        <ResearcherNotifications/>
                     </Route>
 
                     <Route path = "/update-reviewer/:ID" exact component = {UpdateReviewer}/>

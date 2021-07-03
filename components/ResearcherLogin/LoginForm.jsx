@@ -42,8 +42,11 @@ export default class LoginForm extends Component {
                     description:
                       'You have sucessfully logged as an researcher to the ICAF',
                   });
-                  
-                window.location.replace("/Add-ResearchPaper")
+
+                // console.log('token : ' + localStorage.getItem('token')) 
+                // console.log('id : ' + localStorage.getItem('id')) 
+                // console.log('username : ' + localStorage.getItem('username')) 
+                window.location.replace("/researcher-dashboard")
             }
             
         }).catch(err =>{
