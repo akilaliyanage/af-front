@@ -55,6 +55,7 @@ function ApproveTitle(){
 
             if(res.data.status === 200){
                 alert("Approved");
+                setVisible("none");
             }
             else {
                 alert("Failed")

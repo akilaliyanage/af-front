@@ -85,7 +85,7 @@ function EventStatus(props){
                         <button type="button" style={{marginLeft:"20%", width:"40%"}} className={researchStatusColor}>{researchStatus}</button></span></h5>
 
                         <h5 style={{color:"orange"}}>Participation<span className="pull-right">
-                        <button type="button" style={{marginLeft:"15%", width:"40%"}} className={participateStatusColor}>{participateStatus}</button></span></h5>
+                        <button type="button" style={{marginLeft:"40px", width:"40%"}} className={participateStatusColor}>{participateStatus}</button></span></h5>
 
 
                     </div>

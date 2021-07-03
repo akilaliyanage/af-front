@@ -12,7 +12,7 @@ function ReviewersCard(props){
 
 
     useEffect(() => {
-        const url = config.host+"/reviewer/";
+        const url = config.host+"/reviewer";
         axios.get(url).then((res) => {
             setReviewers(res.data);
         }).catch((err) => {

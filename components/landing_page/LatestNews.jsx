@@ -26,7 +26,7 @@ class LatestNews extends Component {
                 <div className="flex-container">
                     {this.state.news.map(item => {
                         return (
-                            <div><NewsCard date={item.edate} name={item.name} url={ item.url} image={item.image} des={item.des}/></div>
+                            <NewsCard date={item.edate} name={item.name} url={ item.url} image={item.image} des={item.des}/>
                         );
                     })}
                 </div>

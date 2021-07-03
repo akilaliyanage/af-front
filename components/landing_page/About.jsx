@@ -43,8 +43,8 @@ class About  extends Component {
 
                         <Divider type="vertical" />
                     </Col>
-                    <Col span={12}> 
-                        <p>{this.state.des}</p>
+                    <Col span={10}> 
+                        <p style={{fontSize:'1.5rem', textAlign:'justify'}}>{this.state.des}</p>
                     </Col>
                 </Row>
             </div>
