@@ -49,7 +49,7 @@ function ApproveTitle(){
         }
 
         console.log(newTitle);
-        const url = config.local+"/admin/approve/topic";
+        const url = config.host+"/admin/approve/topic";
 
         axios.post(url,newTitle).then((res) => {
 

@@ -51,8 +51,8 @@ class NavBar extends Component {
             <div className="dropdown-content">
                 <br />
                 <Link to="/register"><p>Attendee </p></Link>
-                <Link to=""><p>researcher Registration</p></Link>
-                <Link to=""><p>workshop presenter</p></Link>
+                <Link to="/ResearcherRegistration"><p>Researcher Registration</p></Link>
+                <Link to="/workCordinaorReg"><p>workshop Conductor</p></Link>
                 <Link to="/editor/reg"><p>Editor</p></Link>
             </div>
         </div>
@@ -63,7 +63,7 @@ class NavBar extends Component {
                 <br />
                 <Link to="/login"><p>Attendee Login</p></Link>
                 <Link to="/researcher-login"><p>researcher Login</p></Link>
-                <Link to=""><p>workshop Login</p></Link>
+                <Link to="/workCordinaorReg"><p>workshop Login</p></Link>
                 <Link to="/admin/login"><p>Admin Login</p></Link>
                 <Link to="/edi-login"><p>Editor Login</p></Link>
                 <Link to="/reviewLogin"><p>Reviewer Login</p></Link>
