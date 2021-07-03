@@ -82,14 +82,14 @@ class CreateWorkshop extends Component {
             },
             body : JSON.stringify(data)
         }).then(res => res.json()).then(data =>{
-            
-            alert("Workshop Created Successfully!")
-            
+            if(data.status == 200){
+                alert("Workshop Created Successfully!")
+                window.location = `/condDash`
+            }
         }).catch(err =>{
             console.log(err)
         })
 
-        window.location = `/condDash`
     }
 
     render() {

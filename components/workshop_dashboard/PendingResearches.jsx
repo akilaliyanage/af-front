@@ -21,6 +21,7 @@ class PendingResearches extends Component {
         }
         this.approveResearch = this.approveResearch.bind(this);
         this.declineResearch = this.declineResearch.bind(this);
+        this.saveNotification = this.saveNotification.bind(this);
         this.showModal = this.showModal.bind(this);
         this.handleOk = this.handleOk.bind(this);
         this.handleCancel = this.handleCancel.bind(this);
@@ -46,6 +47,24 @@ class PendingResearches extends Component {
         this.setState({visible : false})
     };
 
+    saveNotification(data){
+        fetch(config.host + '/notify/create',{
+            method : 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body : JSON.stringify(data)
+        }).then(res => res.json()).then(data =>{
+            if(data.status == 200){
+                console.log('noti saved')
+                // alert("Workshop Created Successfully!")
+                // window.location = `/condDash`
+            }
+        }).catch(err =>{
+            console.log(err)
+        })
+    }
+
     componentDidMount(){
         this.fetchItems(); 
     }
@@ -55,17 +74,25 @@ class PendingResearches extends Component {
     }
     
 
-    approveResearch(id){
-        console.log(id)
+    approveResearch(id,user){
+        console.log(id+', user :'+user)
         fetch(config.host + '/resrch/approve/'+id).then(res => res.json()).then(data =>{
-            
             if(data.message == 'success'){
+                const data = {
+                    type: 'Research-paper',
+                    itemId: id,
+                    userID: user,
+                    // approve: 'Approved',
+                    status: 'Approved'
+                }
+                this.saveNotification(data)
+                
                 alert("Research Approve Successful");
-                window.location = `/workshopDash`
+                // window.location = `/workshopDash`
             }
             else {
                 alert("Research Approve Failed");
-                window.location = `/workshopDash`
+                // window.location = `/workshopDash`
             }
             
         }).catch(err =>{
@@ -75,18 +102,27 @@ class PendingResearches extends Component {
     }
 
 
-    declineResearch(id){
-        console.log(id)
+    declineResearch(id,user){
+        console.log(id+', user :'+user)
         fetch(config.host + '/resrch/decline/'+id).then(res => res.json()).then(data =>{
-            
             if(data.message == 'success'){
+                const data = {
+                    type: 'Research-paper',
+                    itemId: id,
+                    userID: user,
+                    // approve: 'Approved',
+                    status: 'Approved'
+                }
+                this.saveNotification(data)
+                
                 alert("Research Decline Successful");
-                window.location = `/workshopDash`
+                // window.location = `/workshopDash`
             }
             else {
                 alert("Research Decline Failed");
-                window.location = `/workshopDash`
+                // window.location = `/workshopDash`
             }
+            
             
         }).catch(err =>{
             console.log(err)
@@ -129,8 +165,8 @@ class PendingResearches extends Component {
                                                 onClick={() => this.showModal(research)}
                                                 >Preview</button></td>
                                                 <td>
-                                                    <button className="nt-approve-btn" onClick={() => this.approveResearch(research._id)}> Approve </button>
-                                                    <button className="nt-decline-btn" onClick={() => this.declineResearch(research._id)}> Decline </button>
+                                                    <button className="nt-approve-btn" onClick={() => this.approveResearch(research._id,research.researcherId)}> Approve </button>
+                                                    <button className="nt-decline-btn" onClick={() => this.declineResearch(research._id,research.researcherId)}> Decline </button>
                                                 </td>
                                             </tr>
                                     );

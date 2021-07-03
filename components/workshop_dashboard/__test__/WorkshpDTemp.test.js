@@ -25,17 +25,26 @@ it('renders without crashing',() =>{
                 <WorkshopDTemplate/>
            </BrowserRouter>
     ,div)
+<<<<<<< HEAD
+})
+
+=======
 
 })
 
 
+>>>>>>> 661c7a6ddb1f16efe313c06655a1ef3ea1e62b93
 it('matches snapshot', () =>{
     const tree = renderer.create(
         <BrowserRouter>
             <WorkshopDTemplate/>
         </BrowserRouter>
     ).toJSON();
+<<<<<<< HEAD
+    expect(tree).toMatchSnapshot();
+=======
 
     expect(tree).toMatchSnapshot();
     
+>>>>>>> 661c7a6ddb1f16efe313c06655a1ef3ea1e62b93
 })

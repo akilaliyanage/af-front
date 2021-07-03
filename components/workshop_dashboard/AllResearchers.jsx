@@ -16,7 +16,7 @@ class AllResearchers extends Component {
     }
 
     fetchItems(){
-        fetch(config.host + '/reviewer/researchers').then(res => res.json()).then(data => this.setState({allRchs:data})).catch(err => console.log(err))
+        fetch(config.host + '/resrch/researchers').then(res => res.json()).then(data => this.setState({allRchs:data})).catch(err => console.log(err))
     }
 
     render() {

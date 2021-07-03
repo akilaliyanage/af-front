@@ -1,48 +1,61 @@
 import React, { Component } from 'react'
 import './../../assets/css/WorkshopDetails/workshopDash.css'
-// import UserImg from './../../assets/media/nethsara/workshopUser.png'
 import CreateWorkshop from './CreateWorkshop'
 import MyWorkshops from './MyWorkshops'
 
-import { Button, notification } from 'antd';
+import config from '../../config.json'
 
-const openNotification = () => {
-    const key = `open${Date.now()}`;
-    const btn = (
-      <Button type="primary" size="small" onClick={() => notification.close(key)}>
-        Confirm
-      </Button>
-    );
-    notification.open({
-      message: 'Notification Title',
-      description:
-        'A function will be be called after the notification is closed (automatically after the "duration" time of manually).',
-      btn,
-      key,
-      onClose: close,
-    });
-};
+import { Button, notification } from 'antd';
 
 class ConductorDTemp extends Component {
 
     constructor(props){
         super(props)
         this.state = {
-            notifications:'',
+            notifications:[],
             loginID:window.localStorage.getItem('wc-id'),
             loggedUser:window.localStorage.getItem('wc-email')
         }
+        this.fetchItems = this.fetchItems.bind(this)
     }
 
-    // componentDidMount(){
-    //     this.fetchItems(); 
-    // }
+    componentDidMount(){
+        this.fetchItems(); 
+    }
 
-    // fetchItems(){
-    //     fetch(config.local + '').then(res => res.json()).then(data => this.setState({notifications:data})).catch(err => console.log(err))
-    // }
+    fetchItems(){
+        const id = this.state.loginID
+        console.log(id)
+        fetch(config.host + '/notify/myNoti/'+id ).then(res => res.json()).then(data => {
+            this.setState({notifications:data})
+            console.log(data)
+            data.map((noti) => {
+                this.openNotification(noti)
+            })
+        }).catch(err => console.log(err))
 
-    render() {
+    }
+
+
+    openNotification = (noti) => {
+        const key = `open${Date.now()}`;
+        const btn = (
+          <Button type="primary" size="small" onClick={() => notification.close(key)}>
+            Noted!
+          </Button>
+        );
+        notification.open({
+          message: noti.itemId,
+          description:
+            'Your Workshop is '+ noti.Status+' by the system reviewer.',
+          btn,
+          key,
+          onClose: close,
+        });
+    };
+
+    
+render() {
         return (
             <div className="nt-dashboard">
                 <div className="nt-sidenav" style={{color:"white"}}>
@@ -60,7 +73,6 @@ class ConductorDTemp extends Component {
                 </div>
                 
                 <div class="nt-main">
-
                     <div class="nt-navbar">
                         
                         <p className="nt-head-name">Workshop Conductor Dashboard</p>
@@ -69,7 +81,6 @@ class ConductorDTemp extends Component {
                     </div>
 
                     <div className="nt-main-cont">
-
                         <MyWorkshops/>
                         <CreateWorkshop/>
 
@@ -78,8 +89,15 @@ class ConductorDTemp extends Component {
                         </Button> */}
                     </div>
 
+                    {/* {this.state.notifications.map((noti) => {
+                        return(
+                                <h1>{noti.Status}</h1>   
+                        );
+                    })} */}
+                    
+
+                    </div>
                 </div>
-            </div>
         )
     }
 }

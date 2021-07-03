@@ -143,6 +143,7 @@ class WorkCordinatorReg extends Component {
                         <h1 style={{color:"white"}} >I C A F</h1>
                         <p className="nt-sign-head" style={{color:"white"}}>Workshop Coordinator | {this.state.role == 'reg'?'SignUp' : 'LogIn'}</p>    
                     </div>   
+                    
 
                     <div className="nt-log-reg">
                         <div onClick = {() => this.role('reg')} className="nt-rg-btns" style={this.state.role == 'reg' ? back : back2}> <b>SignUp</b> </div>

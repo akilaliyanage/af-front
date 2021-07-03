@@ -11,7 +11,10 @@ import ApprovedWorkshops from '../ApprovedWorkshops'
 
 //clean up
 afterEach(()=>cleanup())
+<<<<<<< HEAD
+=======
 
+>>>>>>> 661c7a6ddb1f16efe313c06655a1ef3ea1e62b93
 //_test_ testcase
 it('fake _test_',() =>{
     expect(true).toBeTruthy()
@@ -25,17 +28,26 @@ it('renders without crashing',() =>{
                 <ApprovedWorkshops/>
            </BrowserRouter>
     ,div)
+<<<<<<< HEAD
+})
+
+=======
 
 })
 
 
+>>>>>>> 661c7a6ddb1f16efe313c06655a1ef3ea1e62b93
 it('matches snapshot', () =>{
     const tree = renderer.create(
         <BrowserRouter>
             <ApprovedWorkshops/>
         </BrowserRouter>
     ).toJSON();
+<<<<<<< HEAD
+    expect(tree).toMatchSnapshot();
+=======
 
     expect(tree).toMatchSnapshot();
     
+>>>>>>> 661c7a6ddb1f16efe313c06655a1ef3ea1e62b93
 })
