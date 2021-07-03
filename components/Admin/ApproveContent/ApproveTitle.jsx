@@ -49,12 +49,13 @@ function ApproveTitle(){
         }
 
         console.log(newTitle);
-        const url = config.host+"/admin/approve/topic";
+        const url = config.local+"/admin/approve/topic";
 
         axios.post(url,newTitle).then((res) => {
 
             if(res.data.status === 200){
                 alert("Approved");
+                setVisible("none");
             }
             else {
                 alert("Failed")
