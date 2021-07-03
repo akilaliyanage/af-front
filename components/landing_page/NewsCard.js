@@ -17,8 +17,8 @@ class NewsCard extends Component {
             <Link to={this.props.url} style={{textDecoration:"none"}}>
                 <Card
             hoverable
-            style={{ width: 240 }}
-            cover={<img alt="example" src={this.props.image} />}
+            style={{ width: 240, height: 400, margin:10 }}
+            cover={<img style={{width : 240, height : 240}} alt="example" src={this.props.image} />}
           >
             <Meta title={this.props.name} description={this.props.des + " @ " + this.props.date} />
           </Card>
